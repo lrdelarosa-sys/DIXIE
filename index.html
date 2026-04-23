@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PACIFIC HORIZON AIRLINE </title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <h2>PACIFIC HORIZON AIRLINE </h2>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#about" class="aboutLink">About</a>
+      <a href="#services" id="servicesBtn">Services</a>
+      <a href="#">Portfolio</a>
+      <a href="#">Blog</a>
+      <a href="#contact" id="contactBtn" class="contactTrigger">Contact</a>
+      <a href="#" class="btn">Get Started</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Your Journey Begins Here.<br>Discover the World with Us.</h1>
+      <p>Experience world-class service, smooth flights, and unforgettable journeys across islands and beyond.</p>
+      <div class="buttons">
+        <a href="#" class="primary">Get Started</a>
+        <a href="#" class="secondary">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <img src="https://static.vecteezy.com/system/resources/previews/033/112/876/non_2x/world-travel-map-with-airplanes-flight-routes-and-pins-marker-illustration-vector.jpg">
+    <div class="about-text">
+      <h3>ABOUT US</h3>
+      <h2>Our goal is to help travelers explore the different islands and cultures of the country.</h2>
+      <p>Pacific Horizon Airline brings you closer to breathtaking destinations, offering seamless travel experiences designed for comfort, safety, and unforgettable journeys.</p>
+      <a href="#" class="btn" id="readMoreBtn">Read More</a>
+<div id="mvBox" class="mv-box">
+  <h3>Our Mission</h3>
+  <p>To deliver safe, comfortable, and inspiring air travel that connects people 
+    and places, opening the sky as a gateway to new experiences.</p>
+
+  <h3>Our Vision</h3>
+  <p>To be the airline that transforms every journey into 
+    an opportunity for discovery, making new horizons accessible to all travelers.</p>
+</div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+<h3>OUR SERVICES</h3>
+<h2>What We Offer</h2>
+
+<div class="service-boxes">
+  <div class="box">
+    <h4>Domestic Flights</h4>
+    <p>Convenient and reliable flights connecting major islands across the Philippines.</p>
+  </div>
+
+  <div class="box">
+    <h4>International Travel</h4>
+    <p>Seamless global connections bringing you closer to top destinations worldwide.</p>
+  </div>
+
+  <div class="box">
+    <h4>Flight Bookings</h4>
+    <p>Easy and secure booking system designed for a smooth travel experience.</p>
+  </div>
+
+  <div class="box">
+    <h4>Travel Assistance</h4>
+    <p>24/7 customer support to help you with your journey anytime, anywhere.</p>
+  </div>
+</div>
+  </section>
+
+  <footer>
+  <div>
+    <h3>PACIFIC HORIZON AIRLINE</h3>
+    <p>Connecting islands, cultures, and people.</p>
+  </div>
+
+  <div>
+    <h4>Quick Links</h4>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact" class="contactTrigger">Contact</a>
+  </div>
+
+  <div>
+    <h4>Services</h4>
+    <a href="#">Flights</a>
+    <a href="#" id="bookingsBtn">Bookings</a>
+    <a href="#">Support</a>
+  </div>
+
+  <!-- CONTACT SECTION -->
+  <div id="contact" class="contact-section">
+    <h4>Contact</h4>
+    <p>✉️ lorencedelarosa18@gmail.com</p>
+    <p>📞 +63 915 819 7192</p>
+  </div>
+</footer>
+  <!-- CONTACT ANIMATION SCRIPT -->
+<script>
+  const contactTriggers = document.querySelectorAll('.contactTrigger');
+  const contact = document.querySelector('#contact');
+
+  contactTriggers.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      // smooth scroll
+      contact.scrollIntoView({ behavior: 'smooth' });
+
+      // pop / highlight
+      contact.classList.add('show');
+
+      // auto-remove after 3s (optional)
+      setTimeout(() => {
+        contact.classList.remove('show');
+      }, 3000);
+    });
+  });
+</script>
+
+<script>
+  const servicesBtn = document.querySelector('#servicesBtn');
+
+  servicesBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const section = document.querySelector('#services');
+
+    section.scrollIntoView({ behavior: 'smooth' });
+
+    // highlight effect
+    section.style.boxShadow = "0 0 30px rgba(37,99,235,0.6)";
+
+    setTimeout(() => {
+      section.style.boxShadow = "none";
+    }, 2000);
+  });
+</script>
+<script>
+  const readMoreBtn = document.querySelector('#readMoreBtn');
+  const mvBox = document.querySelector('#mvBox');
+
+  readMoreBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    mvBox.classList.toggle('show');
+  });
+</script>
+<!-- BOOKINGS MODAL -->
+<div id="bookingModal" class="modal">
+  <div class="modal-content">
+    <span class="closeBtn">&times;</span>
+    <h3>Select Booking Type</h3>
+
+<div class="airlines">
+
+  <div class="card">
+    <img src="https://www.cebu.gov.ph/wp-content/uploads/2025/09/Mactan-Shrine-1_optimized-e1724137067295.webp" alt="Cebu">
+    <div class="card-info">
+      <h4>Manila → Cebu</h4>
+      <p>₱1,500 – ₱3,000</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://myhouse.ph/wp-content/uploads/2025/05/Davao-City-Featured-Image.jpg" alt="Davao">
+    <div class="card-info">
+      <h4>Manila → Davao</h4>
+      <p>₱2,000 – ₱3,500</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/e7/b0/ea/photo0jpg.jpg?w=1200&h=700&s=1" alt="Palawan">
+    <div class="card-info">
+      <h4>Manila → Palawan</h4>
+      <p>₱1,800 – ₱3,200</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe3tpvcb7BMjSXl-GjY2kYk0Z5Shn80r0ryA&s" alt="Iloilo">
+    <div class="card-info">
+      <h4>Manila → Iloilo</h4>
+      <p>₱1,400 – ₱2,800</p>
+    </div>
+  </div>
+
+</div>
+<script>
+  const bookingBtn = document.querySelector('#bookingsBtn');
+  const modal = document.querySelector('#bookingModal');
+  const closeBtn = document.querySelector('.closeBtn');
+
+  bookingBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal.classList.add('show');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.classList.remove('show');
+  });
+
+  // close when clicking outside
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.remove('show');
+    }
+  });
+</script>
+</body>
+</html>
